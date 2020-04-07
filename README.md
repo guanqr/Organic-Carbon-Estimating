@@ -1,3 +1,3 @@
 # Organic-Carbon-Estimating
 
-A SRTP about estimating organic carbon stocks in some marine areas. Here are some MATLAB functions we used.
+A program used in estimating organic carbon stocks in marine areas. You can get the basic datas such as backscattering coefficient and remote-sensing reflectance on NASA Ocean Color.
