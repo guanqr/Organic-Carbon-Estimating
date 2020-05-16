@@ -93,3 +93,10 @@ draw_map(lat1,lon1,POC);
 caxis(temp1);
 
 sum4=get_POC(POC);
+
+%保存图片
+saveas(gcf,'figures/POC_2010_seasonal.fig')
+
+%输出四季浓度均值结果到mat
+seasonal = [sum1 sum2 sum3 sum4];
+save('results/POC_2010_seasonal.mat','seasonal')

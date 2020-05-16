@@ -1,4 +1,4 @@
-function [X,Lat,Lon]=read_x_nc(InPath,Name,x)
+function [X,Lat,Lon] = read_x_nc(InPath,Name,x)
 source = strcat(InPath,Name);
 %ncdisp(source);
 Lon = ncread(source,'lon');
