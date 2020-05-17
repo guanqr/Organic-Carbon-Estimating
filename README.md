@@ -20,9 +20,9 @@ POC_data
 │  │      ...
 │  │      
 │  ├─Rrs_555
-│  │       A20100802010171.L3m_SNSP_RRS_Rrs_555_4km.nc
-│  │       A20101722010263.L3m_SNSU_RRS_Rrs_555_4km.nc
-│  │       ...
+│  │      A20100802010171.L3m_SNSP_RRS_Rrs_555_4km.nc
+│  │      A20101722010263.L3m_SNSU_RRS_Rrs_555_4km.nc
+│  │      ...
 │  ...
 │          
 └─seasonal
@@ -44,7 +44,7 @@ figures 文件夹存放输出的图像，以 `.fig` 文件格式输出。
 + `read_x_nc.m`：读取 `.nc` 数据文件经纬度，不可单独执行。
 + `bb_Rrs_fitting.m`：拟合 bb 与 Rrs 数据，并输出拟合图像。
 + `POC_bbp_fitting.m`：拟合 POC 与 bbp 数据，并输出拟合图像。
-+ `POC_2010_seasonal.m`：绘制 2010 年四季的表层 POC 浓度分布与计算浓度均值。
++ `POC_2010_seasonal.m`：绘制 2010 年四季的表层 POC 浓度分布与计算浓度均值，并输出图像。
 + `ndci_logpoc_n_fitting.m`：拟合 log(POC) 与 N 数据，并输出拟合图像。
-+ `POC_3_years_contrast.m`：对比三年的POC浓度估算结果与NASA数据的变化趋势。
-+ `DOC_5_years_contrast.m`：对比五年的DOC浓度估算结果。
++ `POC_3_years_contrast.m`：对比三年的POC浓度估算结果与NASA数据的变化趋势，并输出图像。
++ `DOC_5_years_contrast.m`：对比五年的DOC浓度估算结果，并输出图像。
