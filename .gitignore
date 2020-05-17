@@ -1,3 +1,5 @@
 *.fig
 *.nc
 *.txt
+*.ini
+*.asv
