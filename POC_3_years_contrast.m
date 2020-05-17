@@ -1,3 +1,5 @@
+%绘制三年的表层POC浓度计算值，与NASA的数据作对比
+clear; clc;
 x = 1:1:4;
 
 %输入Two-Step算法计算数据
@@ -26,4 +28,4 @@ name = {'Spring', 'Summer', 'Autumn', 'Winter'};
 set(gca, 'XTickLabel', name);
 
 %保存图片
-saveas(gcf,'figures/POC_3_years_contrast.fig')
+saveas(gcf,'figures/POC_3_years_contrast.fig');

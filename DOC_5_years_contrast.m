@@ -1,3 +1,4 @@
+%绘制2006~2010五年四季表层DOC浓度变化统计图
 clear; clc;
 
 %输入2006~2010五年四季的数据
@@ -22,4 +23,4 @@ xlabel('Year','fontsize', fontsize, 'fontname', 'Times New Roman');
 set(gca,'XTickLabel', {'2006','2007','2008','2009','2010'});
 
 %保存图片
-saveas(gcf, 'figures/DOC_5_years_contrast.fig')
+saveas(gcf, 'figures/DOC_5_years_contrast.fig');

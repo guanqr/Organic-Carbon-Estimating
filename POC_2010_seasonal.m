@@ -1,3 +1,4 @@
+%绘制2010年表层POC浓度分布图
 clear; clc;
 InPath = 'POC_data\seasonal\Rrs_555\';
 
@@ -13,15 +14,19 @@ ind3 = find(Lat<23,1); %北纬最小值
 ind4 = find(Lat<34,1); %北纬最大值
 lat1 = Lat(ind4:ind3);
 Rrs = Rrs_555(ind1:ind2,ind4:ind3);
+
 %计算POC浓度
 bb = 2.109*Rrs-0.001186;
 bbp = bb-0.0015;
 bbp(bbp<0) = 0;
 POC = 2607*bbp.^0.4975;
+
 %绘制夏季浓度分布图
 subplot(222);
 draw_map(lat1,lon1,POC);
+text(118,33,'(b)','fontsize', 14, 'fontname', 'Times New Roman');
 temp1 = caxis;
+
 %计算夏季浓度均值
 sum2 = get_POC(POC);
 
@@ -44,6 +49,7 @@ POC = 1359*bbp.^0.3252;
 
 subplot(221);
 draw_map(lat1,lon1,POC);
+text(118,33,'(a)','fontsize', 14, 'fontname', 'Times New Roman');
 caxis(temp1);
 
 sum1 = get_POC(POC);
@@ -67,6 +73,7 @@ POC = 1498*bbp.^0.3827;
 
 subplot(223);
 draw_map(lat1,lon1,POC);
+text(118,33,'(c)','fontsize', 14, 'fontname', 'Times New Roman');
 caxis(temp1);
 
 sum3 = get_POC(POC);
@@ -90,13 +97,14 @@ POC=849.4*bbp.^0.2668;
 
 subplot(224);
 draw_map(lat1,lon1,POC);
+text(118,33,'(d)','fontsize', 14, 'fontname', 'Times New Roman');
 caxis(temp1);
 
 sum4=get_POC(POC);
 
 %保存图片
-saveas(gcf,'figures/POC_2010_seasonal.fig')
+saveas(gcf,'figures/POC_2010_seasonal.fig');
 
 %输出四季浓度均值结果到mat
 seasonal = [sum1 sum2 sum3 sum4];
-save('results/POC_2010_seasonal.mat','seasonal')
+save('results/POC_2010_seasonal.mat','seasonal');

@@ -1,3 +1,4 @@
+%根据算法拟合bb-Rrs数据曲线
 clear; clc;
 InPath = 'POC_data\seasonal\';
 
@@ -40,4 +41,4 @@ hl = legend(h, '\it b_b - R_{rs}', 'Fitting Curve', 'Location', 'SouthEast');
 set(hl, 'EdgeColor', 'w')
 
 %保存图片
-saveas(gcf, 'figures/bb_Rrs_fitting.fig')
+saveas(gcf, 'figures/fitting_bb_Rrs.fig');

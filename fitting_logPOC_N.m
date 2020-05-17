@@ -1,5 +1,7 @@
+%根据NDCI算法拟合数据曲线
 clear; clc;
 InPath = 'POC_data\seasonal\';
+
 season = 1; %选取拟合数据的季节
 if season == 1
     name1 = 'Rrs_555\A20100802010171.L3m_SNSP_RRS_Rrs_555_4km.nc';
@@ -48,4 +50,4 @@ hl = legend(h, 'log(\itc\rm(POC)\rm) - \it N', 'Fitting Curve', 'Location', 'Sou
 set(hl, 'EdgeColor', 'w')
  
 %保存图片
-saveas(gcf, 'figures/ndci_logpoc_n_fitting.fig')
+saveas(gcf, 'figures/fitting_logPOC_N.fig');

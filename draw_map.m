@@ -1,5 +1,5 @@
 function draw_map(Lat, Lon, x)
-
+%绘制东海水域含量分布图
 h = pcolor(Lon, Lat, x');
 mcolor = load('mcolor.mat');
 mcolor = mcolor.mcolor;

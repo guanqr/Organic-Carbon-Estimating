@@ -1,3 +1,4 @@
+%根据算法拟合POC-bbp数据曲线
 clear; clc;
 InPath = 'POC_data\seasonal\';
 
@@ -41,7 +42,7 @@ set(gca, 'linewidth', 1, 'fontsize', fontsize, 'fontname', 'Times New Roman');
 ylabel('\it c\rm(POC) (mg/m^3)', 'fontsize', fontsize, 'fontname', 'Times New Roman');   
 xlabel('\it b_{bp} \rm(m^{-1})', 'fontsize', fontsize, 'fontname', 'Times New Roman');
 hl = legend(h, '\it c\rm(POC) - \it b_{bp}', 'Fitting Curve', 'Location', 'NorthEast');
-set(hl, 'EdgeColor', 'w')
+set(hl, 'EdgeColor', 'w');
  
 %保存图片
-saveas(gcf, 'figures/POC_bbp_fitting.fig')
+saveas(gcf, 'figures/fitting_POC_bbp.fig');
