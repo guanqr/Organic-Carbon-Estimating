@@ -1,6 +1,6 @@
-%绘制2010年表层POC浓度分布图
+%绘制2010年表层POC浓度分布图，并计算表层浓度均值
 clear; clc;
-InPath = 'POC_data\seasonal\Rrs_555\';
+InPath = 'data\seasonal\Rrs_555\';
 
 %绘制夏季分布图（因为夏季POC的colorbar区域范围最大，以夏季的colorbar作为标准）
 name = 'A20101722010263.L3m_SNSU_RRS_Rrs_555_4km.nc';
@@ -23,7 +23,7 @@ POC = 2607*bbp.^0.4975;
 
 %绘制夏季浓度分布图
 subplot(222);
-draw_map(lat1,lon1,POC);
+draw_map(lat1, lon1, POC, 'POC');
 text(118,33,'(b)','fontsize', 14, 'fontname', 'Times New Roman');
 temp1 = caxis;
 
@@ -48,7 +48,7 @@ bbp(bbp<0) = 0;
 POC = 1359*bbp.^0.3252;
 
 subplot(221);
-draw_map(lat1,lon1,POC);
+draw_map(lat1, lon1, POC, 'POC');
 text(118,33,'(a)','fontsize', 14, 'fontname', 'Times New Roman');
 caxis(temp1);
 
@@ -72,7 +72,7 @@ bbp(bbp<0) = 0;
 POC = 1498*bbp.^0.3827;
 
 subplot(223);
-draw_map(lat1,lon1,POC);
+draw_map(lat1, lon1, POC, 'POC');
 text(118,33,'(c)','fontsize', 14, 'fontname', 'Times New Roman');
 caxis(temp1);
 
@@ -96,7 +96,7 @@ bbp(bbp<0)=0;
 POC=849.4*bbp.^0.2668;
 
 subplot(224);
-draw_map(lat1,lon1,POC);
+draw_map(lat1, lon1, POC, 'POC');
 text(118,33,'(d)','fontsize', 14, 'fontname', 'Times New Roman');
 caxis(temp1);
 
@@ -106,5 +106,5 @@ sum4=get_POC(POC);
 saveas(gcf,'figures/POC_2010_seasonal.fig');
 
 %输出四季浓度均值结果到mat
-seasonal = [sum1 sum2 sum3 sum4];
-save('results/POC_2010_seasonal.mat','seasonal');
+% seasonal = [sum1 sum2 sum3 sum4];
+% save('results/POC_2010_seasonal.mat','seasonal');

@@ -1,6 +1,6 @@
 %根据NDCI算法拟合数据曲线
 clear; clc;
-InPath = 'POC_data\seasonal\';
+InPath = 'data\seasonal\';
 
 season = 1; %选取拟合数据的季节
 if season == 1

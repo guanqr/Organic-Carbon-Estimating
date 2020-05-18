@@ -1,6 +1,6 @@
 %根据算法拟合POC-bbp数据曲线
 clear; clc;
-InPath = 'POC_data\seasonal\';
+InPath = 'data\seasonal\';
 
 %读取2010年夏季POC数据
 name = 'poc\A20101722010263.L3m_SNSU_POC_poc_4km.nc';

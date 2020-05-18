@@ -1,6 +1,6 @@
 %根据算法拟合bb-Rrs数据曲线
 clear; clc;
-InPath = 'POC_data\seasonal\';
+InPath = 'data\seasonal\';
 
 %读取2010年夏季Rrs数据
 name = 'Rrs_555\A20101722010263.L3m_SNSU_RRS_Rrs_555_4km.nc';
