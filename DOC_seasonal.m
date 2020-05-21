@@ -1,5 +1,5 @@
 %绘制表层DOC浓度分布图，并计算表层浓度均值，可调整变量year更换年份进行计算
-clear all;clc;
+clear; clc;
 
 %同一年份不同季节对比
 year = 2010; %设定计算年份
@@ -44,4 +44,4 @@ avg_wi;
 %保存图片
 saveas(gcf, 'figures/DOC_2010_seasonal.fig');
 
-% save('results/DOC_2010.mat','DOC_SP','DOC_SU','DOC_AU','DOC_WI','-v7.3');
+%save('results/DOC_2010.mat','DOC_SP','DOC_SU','DOC_AU','DOC_WI','-v7.3');

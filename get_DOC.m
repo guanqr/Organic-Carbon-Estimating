@@ -8,8 +8,8 @@ name1 = strcat('Rrs_531\', season,'RRS_Rrs_531_4km.nc');
 name2 = strcat('Rrs_667\', season,'RRS_Rrs_667_4km.nc');
 [Rrs_667,Lat,Lon] = read_x_nc(InPath,name2,'Rrs_667');
 
-ind1=find(Lon>117,1);
-ind2=find(Lon>131,1);
+ind1 = find(Lon>117,1);
+ind2 = find(Lon>131,1);
 lon1 = Lon(ind1:ind2);
 ind3 = find(Lat<23,1);
 ind4 = find(Lat<34,1);
